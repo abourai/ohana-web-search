@@ -126,7 +126,10 @@ define(['async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false!call
     if (markerData['coordinates'] && markerData['coordinates'][0] && markerData['coordinates'][1])
     {
       var myLatlng = new google.maps.LatLng(markerData['coordinates'][1],markerData['coordinates'][0]);
-
+      var sprite = new Image();
+      sprite.src = '/assets/markers/spritesheet.png';
+      var spriteSize = 11;
+      
       var markerIcon = '/assets/markers/human_services.png';
 
       var marker = new google.maps.Marker({
